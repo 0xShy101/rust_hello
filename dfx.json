@@ -1,19 +1,20 @@
 {
   "canisters": {
-    "staticIcWebsite": {
-      "main": "src/staticIcWebsite/main.mo",
-      "type": "motoko"
+    "rust_hello": {
+      "candid": "src/rust_hello/rust_hello.did",
+      "package": "rust_hello",
+      "type": "rust"
     },
-    "staticIcWebsite_assets": {
+    "rust_hello_assets": {
       "dependencies": [
-        "staticIcWebsite"
+        "rust_hello"
       ],
       "frontend": {
-        "entrypoint": "src/staticIcWebsite_assets/src/index.html"
+        "entrypoint": "src/rust_hello_assets/src/index.html"
       },
       "source": [
-        "src/staticIcWebsite_assets/assets",
-        "dist/staticIcWebsite_assets/"
+        "src/rust_hello_assets/assets",
+        "dist/rust_hello_assets/"
       ],
       "type": "assets"
     }
