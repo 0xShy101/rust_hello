@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "rust_custom": {
+      "candid": "src/rust_custom/rust_custom.did",
+      "package": "rust_custom",
+      "type": "rust"
+    },
+    "rust_custom_assets": {
+      "dependencies": [
+        "rust_custom"
+      ],
+      "frontend": {
+        "entrypoint": "src/rust_custom_assets/src/index.html"
+      },
+      "source": [
+        "src/rust_custom_assets/assets",
+        "dist/rust_custom_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
